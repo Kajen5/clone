@@ -38,7 +38,7 @@ jobs:
           # Upload entire repository
           path: '.'
       - name: copy
-        run: cp nginx.conf /etc/nginx/sites-available/ && cp nginx.conf /etc/nginx/sites-enabled/
+        run: sudo cp nginx.conf /etc/nginx/sites-available/ && sudo cp nginx.conf /etc/nginx/sites-enabled/
       - name: restart
         run: sudo systemctl reload nginx
       - name: Deploy to GitHub Pages
