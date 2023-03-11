@@ -37,6 +37,7 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-      - name: Start containers
-        id: deploy
-        run: docker-compose -f "docker-compose.yml" up -d --build
+      - name: copy
+        run: cp nginx.conf /etc/nginx/sites-available/ && cp nginx.conf /etc/nginx/sites-enabled/
+      - name: restart
+        run: sudo systemctl reload nginx
