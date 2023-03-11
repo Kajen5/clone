@@ -38,4 +38,5 @@ jobs:
           # Upload entire repository
           path: '.'
       - name: Start containers
+        id: deploy
         run: docker-compose -f "docker-compose.yml" up -d --build
