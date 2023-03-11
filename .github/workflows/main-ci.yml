@@ -10,9 +10,11 @@ jobs:
     steps:
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: ./srv
+          path: ./_site
           name: github-pages
           retention-days: 1
+      - name: List files
+        run: ls
       - name: publish
         uses: pennsignals/publish_docker-compose@v0.1.0
         with:
