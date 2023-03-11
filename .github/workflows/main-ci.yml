@@ -8,11 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./_site
-          name: github-pages
-          retention-days: 1
       - name: List files
         run: ls
       - name: publish
