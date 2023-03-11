@@ -4,6 +4,7 @@ version: '3'
 
 services:
   server:
+    container_name: deploy_cesar
     image: nginx:alpine
     restart: always
     ports:
